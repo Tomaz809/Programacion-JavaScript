@@ -1,0 +1,598 @@
+const usuarios = [
+  {
+    id: 1,
+    first_name: "Nancey",
+    last_name: "Greason",
+    bank: "COMPASS BANK",
+    city: "Marcos Juárez",
+    country: "Argentina",
+    salary: 10,
+    expenses: 60,
+  },
+  {
+    id: 2,
+    first_name: "Ellissa",
+    last_name: "Ivakhin",
+    bank: "JPMORGAN CHASE",
+    city: "Fujioka",
+    country: "Japan",
+    salary: 93,
+    expenses: 61,
+  },
+  {
+    id: 3,
+    first_name: "Jecho",
+    last_name: "Dear",
+    bank: "Coöperatieve Rabobank U.A.",
+    city: "Guajará Mirim",
+    country: "Brazil",
+    salary: 19,
+    expenses: 88,
+  },
+  {
+    id: 4,
+    first_name: "Valeda",
+    last_name: "Bamling",
+    bank: "UNITED COMMUNITY BANK",
+    city: "Dalang",
+    country: "China",
+    salary: 60,
+    expenses: 66,
+  },
+  {
+    id: 5,
+    first_name: "Cherish",
+    last_name: "Clerc",
+    bank: "PSD Bank Karlsruhe-Neustadt eG",
+    city: "São Paulo de Olivença",
+    country: "Brazil",
+    salary: 35,
+    expenses: 73,
+  },
+  {
+    id: 6,
+    first_name: "Torr",
+    last_name: "Guise",
+    bank: "PENTAGON FEDERAL CREDIT UNION",
+    city: "Kool Tengah",
+    country: "Indonesia",
+    salary: 51,
+    expenses: 21,
+  },
+  {
+    id: 7,
+    first_name: "Nikolaus",
+    last_name: "Tulip",
+    bank: "Volksbank Mönchengladbach eG",
+    city: "Palcza",
+    country: "Poland",
+    salary: 10,
+    expenses: 96,
+  },
+  {
+    id: 8,
+    first_name: "Hilario",
+    last_name: "Hornbuckle",
+    bank: "HERITAGE BANK",
+    city: "Cibingbin",
+    country: "Indonesia",
+    salary: 5,
+    expenses: 12,
+  },
+  {
+    id: 9,
+    first_name: "Kitti",
+    last_name: "Deakins",
+    bank: "HUNTINGTON NATIONAL BANK",
+    city: "Mantar",
+    country: "Indonesia",
+    salary: 89,
+    expenses: 42,
+  },
+  {
+    id: 10,
+    first_name: "Tera",
+    last_name: "Tilne",
+    bank: "COMPASS BANK",
+    city: "La Mula",
+    country: "Venezuela",
+    salary: 91,
+    expenses: 94,
+  },
+  {
+    id: 11,
+    first_name: "Garald",
+    last_name: "Fuggle",
+    bank: "Fio banka, a.s.",
+    city: "Fundación",
+    country: "Dominican Republic",
+    salary: 72,
+    expenses: 9,
+  },
+  {
+    id: 12,
+    first_name: "Denis",
+    last_name: "Arrandale",
+    bank: "M B FINANCIAL BANK",
+    city: "Savalou",
+    country: "Benin",
+    salary: 47,
+    expenses: 52,
+  },
+  {
+    id: 13,
+    first_name: "Dannel",
+    last_name: "Buckthought",
+    bank: "Nordnet Bank AB",
+    city: "Borås",
+    country: "Sweden",
+    salary: 87,
+    expenses: 13,
+  },
+  {
+    id: 14,
+    first_name: "Daren",
+    last_name: "Applegarth",
+    bank: "KEY BANK",
+    city: "Rio Real",
+    country: "Brazil",
+    salary: 63,
+    expenses: 58,
+  },
+  {
+    id: 15,
+    first_name: "Annnora",
+    last_name: "Loudwell",
+    bank: "BANK OF AMERICA",
+    city: "Esso",
+    country: "Russia",
+    salary: 71,
+    expenses: 2,
+  },
+  {
+    id: 16,
+    first_name: "Jillie",
+    last_name: "Putman",
+    bank: "Louvre Banque Privée",
+    city: "Tanrake Village",
+    country: "Tuvalu",
+    salary: 95,
+    expenses: 61,
+  },
+  {
+    id: 17,
+    first_name: "Winnie",
+    last_name: "Mattielli",
+    bank: "Vereinigte VR Bank Kur- und Rheinpfalz eG",
+    city: "Gurlan",
+    country: "Uzbekistan",
+    salary: 64,
+    expenses: 14,
+  },
+  {
+    id: 18,
+    first_name: "Yankee",
+    last_name: "Chellingworth",
+    bank: "Kreissparkasse Tübingen",
+    city: "Kalde Panga",
+    country: "Indonesia",
+    salary: 32,
+    expenses: 5,
+  },
+  {
+    id: 19,
+    first_name: "Pattin",
+    last_name: "Lghan",
+    bank: "HSBC BANK",
+    city: "Az Zawr",
+    country: "Kuwait",
+    salary: 73,
+    expenses: 3,
+  },
+  {
+    id: 20,
+    first_name: "Ryley",
+    last_name: "Dumphries",
+    bank: "CITIBANK",
+    city: "Saint-Dizier",
+    country: "France",
+    salary: 100,
+    expenses: 62,
+  },
+  {
+    id: 21,
+    first_name: "Maurie",
+    last_name: "Dzenisenka",
+    bank: "S Broker AG & Co. KG",
+    city: "Vesoul",
+    country: "France",
+    salary: 84,
+    expenses: 87,
+  },
+  {
+    id: 22,
+    first_name: "Wendell",
+    last_name: "Boriston",
+    bank: "BANCO DE SABADELL - S.A. - SUCURSAL EM PORTUGAL",
+    city: "Béziers",
+    country: "France",
+    salary: 53,
+    expenses: 95,
+  },
+  {
+    id: 23,
+    first_name: "Fionna",
+    last_name: "Krug",
+    bank: "BNP Paribas",
+    city: "Xiangshan",
+    country: "China",
+    salary: 63,
+    expenses: 74,
+  },
+  {
+    id: 24,
+    first_name: "Reggy",
+    last_name: "Kock",
+    bank: "CHEMICAL BANK",
+    city: "Las Flores",
+    country: "Mexico",
+    salary: 66,
+    expenses: 58,
+  },
+  {
+    id: 25,
+    first_name: "Arlie",
+    last_name: "Mattimoe",
+    bank: "BANK OF AMERICA",
+    city: "Odivelas",
+    country: "Portugal",
+    salary: 69,
+    expenses: 32,
+  },
+  {
+    id: 26,
+    first_name: "Geordie",
+    last_name: "Covelle",
+    bank: "TRUSTMARK NATIONAL BANK",
+    city: "Xichangmen",
+    country: "China",
+    salary: 92,
+    expenses: 71,
+  },
+  {
+    id: 27,
+    first_name: "Ricki",
+    last_name: "Presman",
+    bank: "STERLING NATIONAL BANK",
+    city: "Gonbad-e Kāvūs",
+    country: "Iran",
+    salary: 67,
+    expenses: 6,
+  },
+  {
+    id: 28,
+    first_name: "Eva",
+    last_name: "Koenraad",
+    bank: "State Bank of India",
+    city: "Pedraza La Vieja",
+    country: "Venezuela",
+    salary: 8,
+    expenses: 25,
+  },
+  {
+    id: 29,
+    first_name: "Gweneth",
+    last_name: "Houselee",
+    bank: "Volksbank Kurpfalz eG",
+    city: "Moyale",
+    country: "Kenya",
+    salary: 54,
+    expenses: 31,
+  },
+  {
+    id: 30,
+    first_name: "Florie",
+    last_name: "Martinetto",
+    bank: "MBH Befektetési Bank Zártkörűen Működő Részvénytársaság",
+    city: "Bohou",
+    country: "China",
+    salary: 6,
+    expenses: 31,
+  },
+  {
+    id: 31,
+    first_name: "Ashia",
+    last_name: "Fries",
+    bank: "Banco Bilbao Vizcaya Argentaria, S.A.",
+    city: "Rentung",
+    country: "Indonesia",
+    salary: 95,
+    expenses: 66,
+  },
+  {
+    id: 32,
+    first_name: "Morey",
+    last_name: "McGall",
+    bank: "China Construction Bank (Europe) S.A.",
+    city: "Jajce",
+    country: "Bosnia and Herzegovina",
+    salary: 79,
+    expenses: 95,
+  },
+  {
+    id: 33,
+    first_name: "Bevan",
+    last_name: "Fredson",
+    bank: "BANCO COMERCIAL PORTUGUÊS, SA",
+    city: "Lyon",
+    country: "France",
+    salary: 70,
+    expenses: 8,
+  },
+  {
+    id: 34,
+    first_name: "Gayelord",
+    last_name: "Shrimpton",
+    bank: "Raiffeisenbank München-Nord eG",
+    city: "Gramoteino",
+    country: "Russia",
+    salary: 54,
+    expenses: 92,
+  },
+  {
+    id: 35,
+    first_name: "Ivar",
+    last_name: "Seid",
+    bank: "VALLEY NATIONAL BANK",
+    city: "Proença-a-Nova",
+    country: "Portugal",
+    salary: 2,
+    expenses: 41,
+  },
+  {
+    id: 36,
+    first_name: "Alvy",
+    last_name: "Lingner",
+    bank: "REGIONS BANK",
+    city: "Preserje pri Radomljah",
+    country: "Slovenia",
+    salary: 8,
+    expenses: 78,
+  },
+  {
+    id: 37,
+    first_name: "Stacy",
+    last_name: "Bednell",
+    bank: "CASSA DI RISPARMIO DI FERMO S.P.A. (IN FORMA ABBREVIATA CARIFERMO S.P.A.)",
+    city: "Klutuk",
+    country: "Indonesia",
+    salary: 85,
+    expenses: 9,
+  },
+  {
+    id: 38,
+    first_name: "Danyette",
+    last_name: "Vanyard",
+    bank: "kompasbank a/s",
+    city: "Dongguang",
+    country: "China",
+    salary: 22,
+    expenses: 61,
+  },
+  {
+    id: 39,
+    first_name: "Ardenia",
+    last_name: "Gummer",
+    bank: "PNC BANK",
+    city: "Siocon",
+    country: "Philippines",
+    salary: 50,
+    expenses: 4,
+  },
+  {
+    id: 40,
+    first_name: "Tabitha",
+    last_name: "Abbate",
+    bank: "FIRST STATE BANK",
+    city: "Maputsoe",
+    country: "Lesotho",
+    salary: 11,
+    expenses: 49,
+  },
+  {
+    id: 41,
+    first_name: "Mata",
+    last_name: "Dunning",
+    bank: "BANCO BPM SOCIETA' PER AZIONI",
+    city: "Gonbad-e Kāvūs",
+    country: "Iran",
+    salary: 49,
+    expenses: 38,
+  },
+  {
+    id: 42,
+    first_name: "Aggi",
+    last_name: "Spraging",
+    bank: "CITIZENS STATE BANK",
+    city: "Chotcza",
+    country: "Poland",
+    salary: 29,
+    expenses: 17,
+  },
+  {
+    id: 43,
+    first_name: "Rayshell",
+    last_name: "Stratley",
+    bank: "Volksbank Trossingen eG",
+    city: "Qalqīlyah",
+    country: "Palestinian Territory",
+    salary: 79,
+    expenses: 25,
+  },
+  {
+    id: 44,
+    first_name: "Beverly",
+    last_name: "Grigsby",
+    bank: "Caja Rural San Jaime de Alquerías Niño Perdido S. Coop. de Crédito V.",
+    city: "Nonghe",
+    country: "China",
+    salary: 60,
+    expenses: 100,
+  },
+  {
+    id: 45,
+    first_name: "Celle",
+    last_name: "Roset",
+    bank: "Svenska Handelsbanken AB",
+    city: "Carrasqueira",
+    country: "Portugal",
+    salary: 91,
+    expenses: 75,
+  },
+  {
+    id: 46,
+    first_name: "Ardra",
+    last_name: "Bahl",
+    bank: "GRANDPOINT BANK",
+    city: "Rezovac",
+    country: "Croatia",
+    salary: 28,
+    expenses: 67,
+  },
+  {
+    id: 47,
+    first_name: "Jessey",
+    last_name: "Deboick",
+    bank: "FIRST NATIONAL BANK",
+    city: "Sanyang",
+    country: "China",
+    salary: 56,
+    expenses: 4,
+  },
+  {
+    id: 48,
+    first_name: "Sibbie",
+    last_name: "Mariette",
+    bank: "HUNTINGTON NATIONAL BANK",
+    city: "Dromiskin",
+    country: "Ireland",
+    salary: 12,
+    expenses: 80,
+  },
+  {
+    id: 49,
+    first_name: "Avrit",
+    last_name: "Addicote",
+    bank: "FIRST NATIONAL BANK",
+    city: "Tabalosos",
+    country: "Peru",
+    salary: 67,
+    expenses: 5,
+  },
+  {
+    id: 50,
+    first_name: "Merralee",
+    last_name: "Casham",
+    bank: "CASSA RURALE ED ARTIGIANA DI CASTELLANA GROTTE CREDITO COOPERATIVO - SOCIETA' COOPERATIVA",
+    city: "Tres Unidos",
+    country: "Peru",
+    salary: 40,
+    expenses: 10,
+  },
+];
+
+// funcion para buscar un usuario por id
+function buscarUsuario(id) {
+  for (let i = 0; i < usuarios.length; i++) {
+    if (usuarios[i].id === id) {
+      return usuarios[i];
+    }
+  }
+  return null;
+}
+
+// funcion para calcular el ahorro mensual de un usuario por id
+function ahorroMensual(id) {
+  const usuario = buscarUsuario(id);
+  const ahorro = usuario.salary - usuario.expenses;
+  return ahorro;
+}
+
+// funcion para agrupar datos por un campo
+function agruparPorCampo(campo) {
+  let datos = [];
+  for (let i = 0; i < usuarios.length; i++) {
+    const u = usuarios[i];
+    const ahorro = ahorroMensual(u.id);
+    const nombreDelGrupo = u[campo];
+    let registroEncontrado = null;
+    for (let j = 0; j < datos.length; j++) {
+      if (datos[j][campo] === nombreDelGrupo) {
+        registroEncontrado = datos[j];
+        break;
+      }
+    }
+    if (registroEncontrado) {
+      registroEncontrado.ahorroTotal += ahorro;
+      registroEncontrado.cantidadUsuarios += 1;
+    } else {
+      let nuevoObjeto = {
+        cantidadUsuarios: 1,
+        ahorroTotal: ahorro,
+      };
+      nuevoObjeto[campo] = nombreDelGrupo;
+      datos.push(nuevoObjeto);
+    }
+  }
+  return datos;
+}
+
+// 1. funcion balance mensual
+function balanceMensual(id) {
+  const usuario = buscarUsuario(id);
+  if (usuario) {
+    const ahorro = ahorroMensual(id);
+    return {
+      nombre: `${usuario.first_name} ${usuario.last_name}`,
+      banco: usuario.bank,
+      ahorro: ahorro
+    };
+  }
+    return "Usuario no encontrado";
+  }
+
+//2. clasificacion financiera
+function clasificacionFinanciera(id) {
+  const usuario = buscarUsuario(id);
+  if (usuario) {
+    const ahorro = ahorroMensual(id);
+    switch (true) {
+      case ahorro < 500:
+        return "Ahorro bajo";
+      case (ahorro >= 500 && ahorro <= 1000):
+        return "Ahorro promedio";
+      case ahorro > 1000:
+        return "Ahorro alto";
+      default:
+        return "Sin clasificación";
+    }
+  }
+  return "Usuario no encontrado";
+}
+
+// 3. cantidad de ahorro por banco
+function ahorroPorBanco() {
+  return agruparPorCampo("bank");
+}
+
+// 4. pais con mejor ahorro
+function ahorroPorPais() {
+  return agruparPorCampo("country");
+}
+
+let idUsuario = Number(prompt("Ingrese el ID del usuario"));
+
+console.log(balanceMensual(idUsuario));
+console.log(clasificacionFinanciera(idUsuario));
+console.table(ahorroPorBanco());
+console.table(ahorroPorPais());
